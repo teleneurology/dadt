@@ -1,0 +1,70 @@
+.display-4,.lead
+{
+	color: #fff;
+}
+.jumbotron
+{
+	background-color: #3f51b5;
+}
+.container
+{
+	text-align: center;
+}
+.my-4
+{
+	background-color: white;
+}
+hr+p
+{
+	color: #fff;
+}
+/*background-color: #3f51b5;
+    background-image: url(https://miro.medium.com/max/1100/1*vBIWWCFLLzZzGes1HcCJOw.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+*/
+.jumbotron
+{
+	background-image: url(https://miro.medium.com/max/1100/1*vBIWWCFLLzZzGes1HcCJOw.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.my-img{
+	width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-size: contain;
+    border-radius: 5px;
+
+}
+.img-1{
+	background-image: url(https://khn.org/wp-content/uploads/sites/2/2018/02/cognition.jpg?resize=1170,780);
+}
+.img-2{
+	background-image: url(https://blog.malwarebytes.org/wp-content/uploads/2016/04/Cloud-storage-for-Wendy2.png);
+}
+
+.img-3{
+	background-image: url(https://thumbs.dreamstime.com/b/caretaker-elderly-vector-illustration-icon-which0-can-be-easily-modified-caretaker-elderly-vector-illustration-icon-which-can-be-168289060.jpg);
+}
+.jumbotron .container
+{
+	    background-color: rgba(0,0,0,0.6);
+        width: 65%;
+}
+
+#footerSection {background: #202020;color: white;padding: 28px 0 44px;margin-top: 20px;border-top: 1px solid #444;}
+#footerSection a{color:#ccc; font-size:11px; padding:0; line-height:24px; display:block; }
+#footerSection a:hover{color:#fff;  }
+#footerSection  #socialMedia a{ min-width:25px; display:inline; margin-right:6px; text-align:center; line-height:1.5em;}
+#socialMedia img{max-width:60px;}
+#footerSection  #socialMedia a:hover{background:none;}
+
+.span3{
+	width: 25%;
+}
+
