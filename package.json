@@ -1,0 +1,28 @@
+{
+  "name": "dadt",
+  "version": "1.0.0",
+  "description": "DADT website.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o src/unoptimized.css",
+    "build-prod": "postcss src/unoptimized.css -o public/styles.css",
+    "build": "npm run build-css && npm run build-prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teleneurology/teleneurology.github.io.git"
+  },
+  "author": "Shubhansh Aasu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teleneurology/teleneurology.github.io/issues"
+  },
+  "homepage": "https://github.com/teleneurology/teleneurology.github.io#readme",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
