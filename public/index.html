@@ -14,6 +14,16 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+        }
+
+        #demo-video-view:hover #demo-play-svg {
+            fill: white;
+        }
     </style>
 </head>
 
@@ -24,11 +34,21 @@
         <div class="hidden md:flex md:justify-center md:items-center">
             <div class="border-pink-600 border-2 w-max rounded-full py-1 px-8 text-pink-600 mr-6">Sign-Up</div>
             <ul class="flex text-sm">
-                <li class="px-4">SIGN IN</li>
-                <li class="px-4">MANASTIK</li>
-                <li class="px-4">DEMO</li>
-                <li class="px-4">BLOGS</li>
-                <li class="px-4 pr-10">CONTACT US</li>
+                <a href="">
+                    <li class="px-4">SIGN IN</li>
+                </a>
+                <a href="https://manastik.com/">
+                    <li class="px-4">MANASTIK</li>
+                </a>
+                <a href="#demo">
+                    <li class="px-4">DEMO</li>
+                </a>
+                <a href="#blog">
+                    <li class="px-4">BLOGS</li>
+                </a>
+                <a href="#contact">
+                    <li class="px-4 pr-10">CONTACT US</li>
+                </a>
             </ul>
         </div>
     </div>
@@ -42,7 +62,9 @@
 
 
             </div>
-            <div class="bg-pink-600 px-8 py-4 w-max rounded-full text-white text-xs m-10"><a href="https://dadt-teleneurology.netlify.app/">Take test</a> </div>
+            <a href="https://dadt-teleneurology.netlify.app/">
+                <div class="bg-pink-600 px-8 py-4 w-max rounded-full text-white text-md m-10">Take test </div>
+            </a>
         </div>
     </div>
 
@@ -105,23 +127,41 @@
         </div>
     </div>
 
+    <!-- Video Modal -->
+    <div id="demo-video-modal"
+        class="z-20 inset-0 bg-black h-screen w-full fixed flex flex-row justify-center items-center hidden"
+        style="background-color: #57023171;">
+        <div>
+            <div class="flex flex-col items-end text-white"><svg id="demo-video-close" class="w-9 h-9" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg></div>
+            <iframe style="width: 80vw; height: 45vw;" src="https://www.youtube.com/embed/2y6zdAbN9o8" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
     <hr />
-    <div class="flex flex-col items-center py-10 bg-pink-500">
-        <div class="w-16 h-16 bg-white text-pink-600 rounded-full flex items-center justify-center  mb-6"><svg
-                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172"
+    <div class="flex flex-col items-center py-10 bg-pink-500" id="demo">
+        <div id="demo-video-view"
+            class="w-16 h-16 bg-white hover:bg-pink-600 hover:text-white rounded-full flex items-center justify-center  mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172"
                 style=" fill:#000000;">
                 <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                     stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                     font-family="none" font-weight="none" font-size="none" text-anchor="none"
                     style="mix-blend-mode: normal">
                     <path d="M0,172v-172h172v172z" fill="none"></path>
-                    <g fill="#db2777">
+                    <g fill="#db2777" id="demo-play-svg">
                         <path
                             d="M34.4,18.06v135.88l5.16,-3.01l105.2425,-61.92l5.0525,-3.01l-5.0525,-3.01l-105.2425,-61.92zM41.28,30.1l94.9225,55.9l-94.9225,55.9z">
                         </path>
                     </g>
                 </g>
-            </svg></div>
+            </svg>
+        </div>
         <div class="text-3xl font-bold text-white">Demo</div>
         <div class="text-md p-6 max-w-2xl text-center text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing
             elit. Aenean commodo
@@ -145,7 +185,7 @@
         </div>
     </div>
 
-    <div class="flex flex-col h-screen md:h-96 w-auto md:flex-row-reverse my-14">
+    <div class="flex flex-col h-screen md:h-96 w-auto md:flex-row-reverse my-14" id="blog">
         <div class="flex-grow bg-pink-100"></div>
         <div class="m-6 md:m-16 md:w-1/2">
             <div class="text-3xl font-bold">Blogs</div>
@@ -169,9 +209,30 @@
         </div>
     </div>
 
+    <div class="h-96 bg-pink-500 flex flex-col items-center justify-center pb-10" id="contact">
+        <div class="text-3xl font-bold text-white p-6">Contact Us</div>
+        <input class="p-2 rounded-xl m-2 w-72" type="text" placeholder="Your Name">
+        <input class="p-2 rounded-xl m-2 w-72" type="text" placeholder="Your Email">
+        <textarea class="p-2 rounded-xl m-2 w-72" name="" id="" cols="30" rows="4" placeholder="Message"></textarea>
+        <div class="bg-white px-8 py-2 w-max rounded-xl text-pink-600 text-md font-bold">Send</div>
+    </div>
+
+    <hr>
+
     <div class="h-20 bg-pink-500 flex items-center justify-center text-white">Copyright 2021, All Rights Reserved</div>
+    <script>
+        let viewing = false;
+        let video_modal = document.getElementById("demo-video-modal");
+        let video_close = document.getElementById("demo-video-close");
+        let video_view = document.getElementById("demo-video-view");
 
-
+        video_view.onclick = () => {
+            video_modal.classList.toggle("hidden")
+        }
+        video_close.onclick = () => {
+            video_modal.classList.toggle("hidden")
+        }
+    </script>
 </body>
 
 </html>
