@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DADT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+        }
+
+        #demo-video-view:hover #demo-play-svg {
+            fill: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        class="fixed bg-gray-50 w-screen h-14 flex flex-col items-center justify-center md:flex-row md:justify-between shadow-sm">
+        <img class="w-28 md:ml-6" src="./logo.svg" alt="DADT">
+        <div class="hidden md:flex md:justify-center md:items-center">
+            <div class="border-pink-600 border-2 w-max rounded-full py-1 px-8 text-pink-600 mr-6">Sign-Up</div>
+            <ul class="flex text-sm">
+                <a href="#test">
+                    <li class="px-4">SIGN IN</li>
+                </a>
+                <a href="https://manastik.com/">
+                    <li class="px-4">MANASTIK</li>
+                </a>
+                <a href="#demo">
+                    <li class="px-4">DEMO</li>
+                </a>
+                <a href="#blog">
+                    <li class="px-4">BLOGS</li>
+                </a>
+                <a href="#contact">
+                    <li class="px-4 pr-10">CONTACT US</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero flex flex-col justify-end items-center h-screen" id="test">
+        <div class="md:w-96 w-82"><img src="./hero.svg" style="z-index: -1;" alt="DADT"></div>
+        <div class="flex flex-col justify-end items-center">
+            <div class="text-5xl md:text-8xl text-pink-600">Cognitive Test</div>
+            <div class="m-5 text-center max-w-lg">
+                Take comprehensive tests and get accurate result and helpful insight from you report
+
+
+            </div>
+            <a href="https://dadt-teleneurology.netlify.app/">
+                <div class="bg-pink-600 px-8 py-4 w-max rounded-full text-white text-md m-10">TAKE TEST</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex flex-col h-auto md:h-1/2 w-auto md:flex-row bg-pink-500">
+        <div class="h-96 bg-pink-100 md:w-1/2 md:h-auto"></div>
+        <div class="m-6 md:m-16 md:w-1/2">
+            <div class="text-4xl md:pt-10 font-bold text-white">DADT Test</div>
+            <div class="my-4 text-md md:mt-8 text-white">Dementia Active Diagnosis and Tracking (DADT) is an online app that helps with neurological evaluations and cognitive testing for people suffering from dementia. It helps doctors diagnose dementia better and helps caregivers track progression of dementia.</div>
+            <div class="bg-white px-8 py-4 w-max rounded-full text-pink-600 text-xs font-bold my-8"><a href="https://dadt-teleneurology.netlify.app/">TAKE TEST</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+        <div class="text-3xl py-3 mt-14">Lifestyle Management</div>
+        <div class="text-sm md:w-2/3 m-3">We envision Medical and mental support to bring positivity and comfort to the patient as well as the caregiver. Further, we ensure that you get information, advice, when needed and assistance.</div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-3 gap-5 md:mx-40 m-4">
+            <div class="border-2 bg-white flex flex-col items-center py-10 mt-5">
+                <div class="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center text-white">A</div>
+                <div class="pt-6">Management</div>
+                <div class="text-sm p-6">Several strategies can be used to manage certain common problems in dementia, such as agitation and aggression, nighttime agitation (sundowning), difficulty sleeping, and wandering. Caregivers at times discover other aspects through their own that help as well.</div>
+            </div>
+            <div class="border-2 bg-white flex flex-col items-center py-10 mt-5">
+                <div class="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center text-white">A</div>
+                <div class="pt-6">Caregiver & Family Assistance</div>
+                <div class="text-sm p-6">Caregivers certainly need information, support, and help. It’s necessary for caregivers to understand how dementia will affect the person they’re caring for, and what kind of medical and related care will be needed. In addition, it is important for caregivers to care for themselves and to get assistance when needed, so they can avoid burnout.</div>
+            </div>
+            <div class="border-2 bg-white flex flex-col items-center py-10 mt-5">
+                <div class="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center text-white">A</div>
+                <div class="pt-6">Goals & Planning</div>
+                <div class="text-sm p-6">Planning is necessary to ensure that precautions and steps are taken to avoid worse conditions. Realistic, at the same time optimistic goals should be set to be aware of the situations yet to arise beforehand.</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="demo-video-modal"
+        class="z-20 inset-0 bg-black h-screen w-full fixed flex flex-row justify-center items-center hidden"
+        style="background-color: #57023171;">
+        <div>
+            <div class="flex flex-col items-end text-white"><svg id="demo-video-close" class="w-9 h-9" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg></div>
+            <iframe style="width: 80vw; height: 45vw;" src="https://www.youtube.com/embed/2y6zdAbN9o8" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <hr />
+    <div class="flex flex-col items-center py-10 bg-pink-500" id="demo">
+        <div id="demo-video-view"
+            class="w-16 h-16 bg-white hover:bg-pink-600 hover:text-white rounded-full flex items-center justify-center  mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172"
+                style=" fill:#000000;">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                    font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                    style="mix-blend-mode: normal">
+                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                    <g fill="#db2777" id="demo-play-svg">
+                        <path
+                            d="M34.4,18.06v135.88l5.16,-3.01l105.2425,-61.92l5.0525,-3.01l-5.0525,-3.01l-105.2425,-61.92zM41.28,30.1l94.9225,55.9l-94.9225,55.9z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="text-3xl font-bold text-white">Demo</div>
+        <div class="text-md p-6 max-w-2xl text-center text-white">Get a product demo including how to use the same.</div>
+    </div>
+    <hr />
+
+    
+    <div class="flex flex-col h-screen md:h-96 w-auto md:flex-row my-14">
+        <div class="flex-grow bg-pink-100"></div>
+        <div class="m-6 md:m-16 md:w-1/2">
+            <div class="text-3xl font-bold">Cloud Storage Reports</div>
+            <div class="my-4 text-sm md:mt-8">Medical reports pertaining to but not limited to Neurology such as PET Scan, CT Scan, MRI, MRA, EEG, etc. <br />
+            can be stored on cloud, sent to the neurologists as well as healthcare professionals and accessed by <br /> the patients anywhere on priority.</div>
+            <div class="bg-pink-600 px-8 py-4 w-max rounded-full text-white text-xs font-bold md:mt-16">REPORTS
+                </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col h-screen md:h-96 w-auto md:flex-row-reverse my-14" id="blog">
+        <div class="flex-grow bg-pink-100"></div>
+        <div class="m-6 md:m-16 md:w-1/2">
+            <div class="text-3xl font-bold">Blogs</div>
+            <div class="my-4 text-sm md:mt-8">Check out the latest progress in the field of dementia and caregiver methodologies to go about that.</div>
+            <div class="bg-pink-600 px-8 py-4 w-max rounded-full text-white text-xs font-bold md:mt-16">LATEST BLOGS
+                </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col h-screen md:h-96 w-auto md:flex-row my-14">
+        <div class="flex-grow bg-pink-100"></div>
+        <div class="m-6 md:m-16 md:w-1/2">
+            <div class="text-3xl font-bold">EXTRAS</div>
+            <div class="my-4 text-sm md:mt-8">Glance through some of our other projects and see how we are trying to bridge the gap between Neurology and Technology.</div>
+            <div class="bg-pink-600 px-8 py-4 w-max rounded-full text-white text-xs font-bold md:mt-16"><a href="https://manastik.com/#service">VIEW
+                PROJECTS</a></div>
+        </div>
+    </div>
+
+    <div class="h-96 bg-pink-500 flex flex-col items-center justify-center pb-10" id="contact">
+        <div class="text-3xl font-bold text-white p-6">Contact Us</div>
+        <input class="p-2 rounded-xl m-2 w-72" type="text" placeholder="Your Name">
+        <input class="p-2 rounded-xl m-2 w-72" type="text" placeholder="Your Email">
+        <textarea class="p-2 rounded-xl m-2 w-72" name="" id="" cols="30" rows="4" placeholder="Message"></textarea>
+        <div class="bg-white px-8 py-2 w-max rounded-xl text-pink-600 text-md font-bold">Send</div>
+    </div>
+
+    <hr>
+
+    <div class="h-20 bg-pink-500 flex items-center justify-center text-white">Copyright 2021, All Rights Reserved</div>
+    <script>
+        let viewing = false;
+        let video_modal = document.getElementById("demo-video-modal");
+        let video_close = document.getElementById("demo-video-close");
+        let video_view = document.getElementById("demo-video-view");
+
+        video_view.onclick = () => {
+            video_modal.classList.toggle("hidden")
+        }
+        video_close.onclick = () => {
+            video_modal.classList.toggle("hidden")
+        }
+    </script>
+</body>
+
+</html>
